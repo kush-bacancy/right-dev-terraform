@@ -1,0 +1,31 @@
+[
+  {
+    "name": "AdeptMsAdeptCourseTerraform",
+    "image": "${CONTAINER_IMAGE}",
+    "cpu": 256,
+    "memory": 512,
+    "logConfiguration": {
+      "logDriver": "awslogs",
+      "options": {
+        "awslogs-group": "/ecs/AdeptMsAdeptCourse",
+        "awslogs-create-group": "true",
+        "awslogs-region": "us-east-1",
+        "awslogs-stream-prefix": "ecs"
+      }
+    },
+    "links": [],
+    "portMappings": [
+      {
+        "hostPort": 0,
+        "containerPort": 80,
+        "protocol": "tcp"
+      }
+    ],
+    "essential": true,
+    "entryPoint": [],
+    "command": [],
+    "environment": [],
+    "mountPoints": [],
+    "volumesFrom": []
+  }
+]
